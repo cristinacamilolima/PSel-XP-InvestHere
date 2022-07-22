@@ -1,0 +1,36 @@
+{
+  "name": "psel-xp-investme",
+  "version": "1.0.0",
+  "description": "Repositório criado para processo seletivo da XP pelo curso da Trybe.",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristinacamilolima/PSel-XP-InvestMe.git"
+  },
+  "keywords": [
+    "app",
+    "de",
+    "investimento",
+    "app",
+    "de",
+    "ações"
+  ],
+  "author": "Cristina Camilo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristinacamilolima/PSel-XP-InvestMe/issues"
+  },
+  "homepage": "https://github.com/cristinacamilolima/PSel-XP-InvestMe#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
