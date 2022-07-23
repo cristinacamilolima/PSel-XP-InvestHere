@@ -2,9 +2,10 @@
   "name": "psel-xp-investhere",
   "version": "1.0.0",
   "description": "Repositório criado para processo seletivo da XP pelo curso da Trybe.",
-  "main": "index.js",
+  "main": "src/app.js",  
   "scripts": {
-    "run:dev": "nodemon server.js",
+    "start": "node src/app.js",
+    "run:dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,11 +27,18 @@
   },
   "homepage": "https://github.com/cristinacamilolima/PSel-XP-InvestHere#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "express-rescue": "^1.1.31",
+    "mysql2": "^2.3.3"
   },
   "devDependencies": {
-    "dotenv": "^16.0.1",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "mysql-import": "^5.0.21",
     "nodemon": "^2.0.19"
   }
 }
