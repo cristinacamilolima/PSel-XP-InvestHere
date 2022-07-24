@@ -37,7 +37,8 @@ CREATE TABLE Product(
     primary key(id)
 );
 
-insert into InvestHere.Product (name, quantity, amount) values ('PETR3', 800, 2300);
+insert into InvestHere.Product (name, quantity, amount) values ('PETR4', 800, 2300);
+insert into InvestHere.Product (name, quantity, amount) values ('VALE3', 500, 4200);
 
 CREATE TABLE Wallet(
     id int not null auto_increment,
@@ -54,7 +55,7 @@ CREATE TABLE Wallet(
        ON DELETE CASCADE
 );
 
-insert into InvestHere.Wallet (clientId, productId, quantity, amount) values (1, 1, 100, 2300);
+insert into InvestHere.Wallet (clientId, productId, quantity, amount) values (1, 1, 100, 230000);
 
 CREATE TABLE AccountOperation (
     id int not null auto_increment,
@@ -93,4 +94,4 @@ CREATE TABLE WalletOperation (
      ON DELETE CASCADE
 );
 
-insert into InvestHere.WalletOperation (clientId, productId, quantity, amount, type) values (1, 1, 100, 2300, 'C');
+insert into InvestHere.WalletOperation (clientId, productId, quantity, amount, type) values (1, 1, 100, 230000, 'C');
