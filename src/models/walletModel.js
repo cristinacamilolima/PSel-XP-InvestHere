@@ -10,6 +10,15 @@ const getNewActive = (walletData) => {
   };
 };
 
+const getAllActivesModel = async (clientId) => {
+  const query = 'select w.clientId, p.name, w.quantity, w.amount from InvestHere.Wallet w inner join InvestHere.Product p '
+      + 'on w.productId = p.id where w.clientId= ? and w.quantity <> 0';
+
+  const [result] = await connection.execute(query, [clientId]);
+
+  return result;
+};
+
 const getActiveModel = async (activeId) => {
   const query = 'select id, clientId, productId, quantity, amount from InvestHere.Wallet where id = ?';
 
@@ -56,5 +65,6 @@ module.exports = {
   getActiveModel,
   addNewActiveModel,
   updateActiveModel,
+  getAllActivesModel,
   registerWalletOperation,
 };

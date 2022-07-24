@@ -2,6 +2,17 @@
 const walletModel = require('../models/walletModel');
 const accountModel = require('../models/accountModel');
 
+const getAllActivesService = async (clientId) => {
+  const walletData = await walletModel.getAllActivesModel(clientId);
+
+  return walletData.map((item) => ({
+    CodCliente: item.clientId,
+    CodAtivo: item.name,
+    QtdAtivo: item.quantity,
+    Valor: item.amount / 100,
+  }));
+};
+
 const buyActiveService = async ({ CodCliente, CodAtivo, QtdAtivo }) => {
   const product = await productModel.getProductModel(CodAtivo);
 
@@ -117,4 +128,5 @@ const sellActiveService = async ({ CodCliente, CodAtivo, QtdAtivo }) => {
 module.exports = {
   buyActiveService,
   sellActiveService,
+  getAllActivesService,
 };

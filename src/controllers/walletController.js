@@ -1,7 +1,13 @@
-﻿const walletModel = require('../services/walletService');
+﻿const walletService = require('../services/walletService');
+
+const getActivesController = async (req, res) => {
+  const result = await walletService.getAllActivesService(req.params.param);
+
+  return res.status(200).json(result);
+};
 
 const buyActiveController = async (req, res) => {
-  const result = await walletModel.buyActiveService(req.body);
+  const result = await walletService.buyActiveService(req.body);
 
   if (result !== null) {
     return res.status(400).json({ message: result.error });
@@ -11,7 +17,7 @@ const buyActiveController = async (req, res) => {
 };
 
 const sellActiveController = async (req, res) => {
-  const result = await walletModel.sellActiveService(req.body);
+  const result = await walletService.sellActiveService(req.body);
 
   if (result !== null) {
     return res.status(400).json({ message: result.error });
@@ -23,4 +29,5 @@ const sellActiveController = async (req, res) => {
 module.exports = {
   buyActiveController,
   sellActiveController,
+  getActivesController,
 };
