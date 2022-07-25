@@ -61,53 +61,53 @@ Quem está por de trás desta tela preta, é a Cristina, fique à vontade para c
 # :pencil: Check de Entregas
 
 `Readme`
-- [ ] Uma explicação sobre suas tomadas de decisão na abordagem de seu desafio
-- [ ] Instruções de como compilarmos e executarmos seu projeto
-- [ ] Outras informações que você considere importantes
+- [x] Uma explicação sobre suas tomadas de decisão na abordagem de seu desafio
+- [x] Instruções de como compilarmos e executarmos seu projeto
+- [x] Outras informações que você considere importantes
 
 `Requisições para investimento POST (/investimentos/comprar)`
-- [ ] O endpoint recebe como entradas o código do ativo, a quantidade de ações compradas,número da conta compradora
-- [ ] Descrição dos Campos 
+- [x] O endpoint recebe como entradas o código do ativo, a quantidade de ações compradas,número da conta compradora
+- [x] Descrição dos Campos 
   - “codCliente” - código do cliente (identificador único)
   - “codAtivo” - código de identificação única do ativo
   - “qtdeAtivo” - quantidade de ações a serem compradas
-- [ ] Validações a serem feitas: Quantidade de ativo a ser comprada não pode ser maior que a quantidade disponível na corretora
+- [x] Validações a serem feitas: Quantidade de ativo a ser comprada não pode ser maior que a quantidade disponível na corretora
 
 `Requisições para investimento POST (/investimentos/vender)`
-- [ ] O endpoint recebe como entradas o id do ativo, a quantidade de ações vendidas, número da conta vendedora
-- [ ] Descrição dos Campos 
+- [x] O endpoint recebe como entradas o id do ativo, a quantidade de ações vendidas, número da conta vendedora
+- [x] Descrição dos Campos 
   - “codCliente” - código do cliente (identificador único)
   - “codAtivo” - código de identificação única do ativo
   - “qtdeAtivo” - quantidade de ações a serem vendidas
-- [ ] Quantidade de ativo a ser vendida não pode ser maior que a quantidade disponível na carteira
+- [x] Quantidade de ativo a ser vendida não pode ser maior que a quantidade disponível na carteira
 
 `Requisições para investimento GET BY CLIENT(/ativos/{cod-cliente})`
-- [ ] Descrição dos campos
+- [x] Descrição dos campos
   - “codCliente” - código de identificação única da pessoa cliente
   - “CodAtivo” - código de identificação única do ativo
   - “QtdeAtivo” - quantidade de ações que a pessoa cliente possui
   - “Valor” - Valor da ação
 
 `Requisições para investimento GET BY ASSETS (/ativos/{cod-ativo})`
-- [ ] Descrição dos campos
+- [x] Descrição dos campos
   - “CodAtivo” - código de identificação única do ativo
   - “QtdeAtivo” - quantidade de ações a serem negociadas
   - “Valor” - Valor unitário da ação a ser negociada
 
 `Requisição para depósitos e saques POST (/conta/deposito)`
-- [ ] Descrição dos campos
+- [x] Descrição dos campos
   - “CodCliente” - Código de identificação única da pessoa cliente
   - “Valor” - Valor do depósito
-- [ ] Validações a serem feitas: Quantidade a ser depositada não poderá ser negativa ou igual a zero.
+- [x] Validações a serem feitas: Quantidade a ser depositada não poderá ser negativa ou igual a zero.
 
 `Requisição para depósitos e saques POST (/conta/saque)`
-- [ ] Descrição dos Campos
+- [x] Descrição dos Campos
   - “CodCliente” - Código de identificação única da pessoa cliente
   - “Valor” - Valor do saque
-- [ ] Validações a serem feitas: Quantidade a ser sacada não poderá ser maior que o saldo da conta; não pode ser negativa e não pode ser igual a zero.
+- [x] Validações a serem feitas: Quantidade a ser sacada não poderá ser maior que o saldo da conta; não pode ser negativa e não pode ser igual a zero.
 
 `Requisição para depósitos e saques GET (/conta/{cod-cliente})`
-- [ ] Descrição dos Campos
+- [x] Descrição dos Campos
   - “CodCliente” - Código de identificação única
 da pessoa cliente
   - “Saldo” - Saldo da conta
