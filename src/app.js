@@ -13,6 +13,8 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/health', (req, res) => res.status(200).send());
+
 app.get('/conta/:clientId', accountController.getBalanceController);
 app.post('/conta/deposito', isValidDeposit, accountController.depositController);
 app.post('/conta/saque', isValidWithdraw, accountController.withdrawController);
@@ -29,5 +31,9 @@ app.get('/ativos/:param', (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
+  setTimeout(() => {
+    console.log('Waiting for db');
+  }, 5000);
+
   console.log(`Running on port ${process.env.PORT}`);
 });

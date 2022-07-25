@@ -1,0 +1,37 @@
+﻿version: "3"
+services:
+  db:
+    container_name: invest_here_db
+    image: mysql:5.7
+    platform: linux/x86_64
+    restart: always    
+    ports:
+      - "3306:3306"
+      - "33060:33060"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+  node:
+    build: .
+    user: node
+    working_dir: /app
+    volumes:
+      - ./:/app
+    container_name: invest_here_api
+    tty: true
+    stdin_open: true
+    command: bash
+    restart: always    
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_PORT: 3306
+      HOSTNAME: db
+      NODE_ENV: development
+      PORT: 3000
+networks:
+  default:
