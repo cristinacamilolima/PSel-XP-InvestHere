@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('../swagger_output.json');
 const accountController = require('./controllers/accountController');
 const walletController = require('./controllers/walletController');
 const productCotroller = require('./controllers/productController');
@@ -29,6 +31,8 @@ app.get('/ativos/:param', (req, res) => {
   }
   return productCotroller.getActiveByNameController(req, res);
 });
+
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.listen(process.env.PORT, () => {
   setTimeout(() => {

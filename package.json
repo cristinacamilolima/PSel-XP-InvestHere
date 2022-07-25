@@ -2,7 +2,7 @@
   "name": "psel-xp-investhere",
   "version": "1.0.0",
   "description": "Repositório criado para processo seletivo da XP pelo curso da Trybe.",
-  "main": "src/app.js",  
+  "main": "src/app.js",
   "scripts": {
     "prestart": "node createDb.js",
     "start": "node src/app.js",
@@ -33,13 +33,15 @@
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-rescue": "^1.1.31",
+    "mysql-import": "^5.0.21",
     "mysql2": "^2.3.3",
-    "mysql-import": "^5.0.21"
+    "swagger-autogen": "^2.21.5",
+    "swagger-ui-express": "^4.5.0"
   },
   "devDependencies": {
     "eslint": "^8.20.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",    
+    "eslint-plugin-import": "^2.26.0",
     "nodemon": "^2.0.19"
   }
 }
