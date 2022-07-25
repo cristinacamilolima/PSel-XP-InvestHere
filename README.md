@@ -1,26 +1,64 @@
-
-<h1 align="center">XP InvestHere;)</h1>
-
-<p align="center">Este projeto foi iniciativa do processo seletivo da XP para os estudantes do curso da Trybe, turmas XP, tribos A e B. Eu escolhi focar nos requisitos de backend. O objetivo é " desenvolver um aplicativo de investimento em ações, com algumas funcionalidades de conta digital."</p>
-
-<p align="center">
- <a href="#objetivo">Objetivo</a> •
- <a href="#roadmap">Features</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
- <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
-</p>
-
-<h4 align="center"> 
-	🚧 Este projeto está em construção... 🚧
-</h4>
+# Project App XP InvestHere;)
 
 
-### Features
-- [x] Cadastro de usuário
-- [x] Cadastro de cliente
-- [ ] Cadastro de produtos
+
+Este projeto é parte das etapas dentro do processo seletivo da XP para os estudantes do curso da Trybe, turmas XP, tribos A e B.
+
+	                                      🚧 Este projeto está em construção... 🚧
+
+
+
+# Objetivo do APP
+
+Desenvolver um aplicativo de investimento em ações, com algumas funcionalidades de conta digital.
+
+# Proposta
+
+Os alunos devem escolher entre o desenvolvimento BackEnd ou FrontEnd/Mobile, ficando livres para fazer os dois, porém, é necessário dizer nos formulários internos qual será sua preferência.
+
+# Prazo
+
+O desafio foi liberado no dia 15/07/2022 e a data de entrega é para o dia 24/07/2022 até às 23h59.
+
+# Apresentação e Escolha da Pessoa Desenvolvedora
+
+Fala amigos Dev's Sandy & Junior's, os trybers da turma XP-B entenderão...rs! Quem está por de trás desta tela preta, é a Cristina, a vontade para chamar de Cris. Sou uma Desenvolvedora Iniciante e para este desafio minha escolha para desenvolvimento foi o BackEnd, porém, a intenção de em sequência, implementar a parte do FrontEnd, e assim poder colocar em prática, revisitar conhecimentos e pesquisar bastante para fazer tudo isto funcionar!
+
+---
+
+# Requisitos do Projeto
+
+## Requisitos Mínimos Gerais
+
+  Faça um readme que contenha:
+     
+ - Uma explicação sobre suas tomadas de decisão na abordagem de seu desafio
+ - Instruções de como compilarmos e executarmos seu projeto
+ - Outras informações que você considere importantes
+ 
+  E desenvolva: 
+ - Endpoints listados conforme seção de Contratos de Back-End;
+ - Criar uma lista de ações que passe às informações para Front-End (inclusive as informações da quantidade investida em cada ação)
+       
+
+## Requisitos Adicionais | Back-End
+
+- Testes unitários
+- Deploy da API
+- Autenticação e autorização JWT
+- Documentação da API (Swagger)**
+
+*Não abordado no curso da Trybe
+
+---
+
+### Check de Entregas
+- [ ] Readme
+- [ ] 
+
+---
+
+# Informações, Instruções e Orientações sobre o projeto
 
 ## 🛠 Tecnologias
 
@@ -35,8 +73,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js][nodejs]. 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
+[Git](https://git-scm.com), [Node.js], [MySQL]
+Além disto é bom ter um editor para trabalhar com o código como [VSCode]
 
 ### 🎲 Rodando o Back End (servidor) [Sem Docker]
 
@@ -58,3 +96,14 @@ $ npm run dev:server
 ```
 
 ### 🎲 Rodando o Back End (servidor) [Com Docker]
+
+Rode o serviço `node` com o comando `docker-compose up -d`.
+
+Esse serviço irá inicializar um container chamado xxxxxxxxxxxx.
+A partir daqui você pode rodar o container xxxxxxxxxxxxx via CLI ou abri-lo no VS Code.
+
+---
+
+# Desafios do Projeto
+
+
