@@ -132,46 +132,70 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js], [MySQL]
 Além disto é bom ter um editor para trabalhar com o código como [VSCode]
 
-### 🎲 Rodando o Back End (servidor) [Sem Docker]
+### 🎲 Clonando o repositório
 
 ```bash
 # Clone este repositório
 $ git clone https://github.com/cristinacamilolima/PSel-XP-InvestHere.git [https]
 $ git clone git@github.com:cristinacamilolima/PSel-XP-InvestHere.git     [SSH]
+```
 
+
+### 🎲 Rodando o Back End (servidor) [Sem Docker]
+
+```bash
 # Acesse a pasta do projeto no terminal/cmd
 $ cd PSel-XP-InvestHere
 
 # Instale as dependências
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
+# Rode o mysql 5.7 (Para facilitar utilize o comando docker abaixo.)
+$ docker run --name mysql57 -p 3306:3306  -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7
 
-# O servidor inciará na porta:3000 - acesse http://localhost:3000
+# Execute a aplicação em modo de desenvolvimento
+$ npm run start
+
+# O servidor iniciará na porta:3000 - acesse http://localhost:3000/docs para acessar o swagger
+# Ao rodar o comando npm start, será exutado um pré-script "prestart" para criar as tabelas no banco de dados.
+# Após iniciar a aplicação, ela só estará disponível em 5 segundos.     
 ```
 
 ### 🎲 Rodando o Back End (servidor) [Com Docker]
 
-Rode o serviço `node` com o comando `docker-compose up -d`.
+```bash
+# Acesse a pasta do projeto no terminal/cmd
+$ cd PSel-XP-InvestHere
 
-Esse serviço irá inicializar um container chamado xxxxxxxxxxxx.
-A partir daqui você pode rodar o container xxxxxxxxxxxxx via CLI ou abri-lo no VS Code.
+# Rode o docker-compose
+$ docker-compose build --no-cache && docker-compose up -d
 
----
+# O servidor iniciará na porta:3000 - acesse http://localhost:3000/docs para acessar o swagger
+# Ao rodar o comando npm start, será executado um pré-script "prestart" para criar as tabelas no banco de dados.
+# Após iniciar a aplicação, ela só estará disponível em 5 segundos, pois é o tempo de espera 
+# até que as tabelas tenham sido criadas no banco de dados. 
+```
 
 ### Dica :coin:	
 
 Ferramentas úteis que me ajudaram:
 
- - Miro (para mapa mental da aplicação)
- - Excel (melhor visualização das tabelas)
+ - Miro (para mapa mental da aplicação) - Arquivo disponível na pasta planning do projeto.
+ - Excel (melhor visualização das tabelas) - Arquivo disponível na pasta planning do projeto.
  - Trello (organização das tarefas)
 
 # :bricks: Desafios do Projeto
 
-1. 
+1. Criação do fluxo de carteira
+ - Entender todo o processo de compra e venda de uma ação.
+ - Atualizar os dados da conta do cliente no momento da compra ou venda da ação.
 
+2. Dockerização da aplicação
+ - Quando o container estava rodando a aplicação não estava executando.
+ - Só foi possível resolver buscando solução em aulas anteriores na plataforma da Trybe.
+
+3. Criação do Swagger
+ - Por não ter utilizado o Swagger em projetos anteriores, foi necessário a leitura de um artigo na internet.
 
 # :bulb: Referências
 

@@ -24,7 +24,7 @@
     },
     "/conta/{clientId}": {
       "get": {
-        "description": "",
+        "description": "Endpoint para obter o saldo da conta do cliente.",
         "parameters": [
           {
             "name": "clientId",
@@ -42,7 +42,7 @@
     },
     "/conta/deposito": {
       "post": {
-        "description": "Endpoint para efetuar deposito na conta.",
+        "description": "Endpoint para efetuar deposito na conta. O valor deve ser informado em centavos.",
         "parameters": [
           {
             "name": "body",
@@ -51,10 +51,10 @@
               "type": "object",
               "properties": {
                 "Valor": {
-                  "example": "any"
+                  "example": 5032
                 },
                 "CodCliente": {
-                  "example": "any"
+                  "example": 1
                 }
               }
             }
@@ -72,7 +72,7 @@
     },
     "/conta/saque": {
       "post": {
-        "description": "Endpoint para efetuar saque na conta",
+        "description": "Endpoint para efetuar saque na conta. O valor deve ser informado em centavos.",
         "parameters": [
           {
             "name": "body",
@@ -81,10 +81,10 @@
               "type": "object",
               "properties": {
                 "Valor": {
-                  "example": "any"
+                  "example": 2013
                 },
                 "CodCliente": {
-                  "example": "any"
+                  "example": 1
                 }
               }
             }
@@ -103,7 +103,26 @@
     "/investimento/comprar": {
       "post": {
         "description": "Endpoint para efetuar compra de ações",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "CodCliente": {
+                  "example": 1
+                },
+                "CodAtivo": {
+                  "example": "PETR4"
+                },
+                "QtdAtivo": {
+                  "example": 100
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -117,7 +136,26 @@
     "/investimento/vender": {
       "post": {
         "description": "Endpoint para efetuar venda de ações",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "CodCliente": {
+                  "example": 1
+                },
+                "CodAtivo": {
+                  "example": "PETR4"
+                },
+                "QtdAtivo": {
+                  "example": 100
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
